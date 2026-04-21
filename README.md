@@ -38,3 +38,11 @@ Java – linguagem principal para desenvolvimento do sistema
 Git e GitHub – controle de versão e gerenciamento do projeto 
 IDE (VS Code / Eclipse) – ambiente de desenvolvimento 
 Paradigma Orientado a Objetos (POO) – estruturação do sistema
+Como executar o Projeto pré-requisitos Ter o java instalado Ter uma IDE
+
+Passo a passo
+
+Clone o repositório: htpps://github.com/tamiresteles/ProjetoCafeExpresso.git
+Abra o projeto na sua IDE
+Execute o arquivo principal (ex: Main.java)
+Autoras: Tamires dos Santos Sá Teles Gisele dos Santos Sá Teles
