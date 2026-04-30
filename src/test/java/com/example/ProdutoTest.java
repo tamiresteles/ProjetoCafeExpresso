@@ -7,11 +7,11 @@ public class ProdutoTest {
 
     @Test
     void deveCriarProdutoValido() {
-        Produto p = new Produto("Café", 10.0);
-
+       Produto p = new Produto ("café", 10.0);
         assertEquals("Café", p.getNome());
         assertEquals(10.0, p.getPreco());
     }
+<<<<<<< HEAD
 @Test
     void naoDevePermitirNomeVazio() {
         assertThrows(IllegalArgumentException.class, () -> {
@@ -25,4 +25,6 @@ public class ProdutoTest {
             new Produto("Café", -5.0);
         });
     }
+=======
+>>>>>>> c367e8d1d2a989f07da31cf59639e4d8e6cb9fc1
 }
