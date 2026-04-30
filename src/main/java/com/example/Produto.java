@@ -11,4 +11,9 @@ public class Produto {
             throw new IllegalArgumentException("Nome do produto não pode ser vazio!");
         }
 
+        if (preco < 0) {
+            throw new IllegalArgumentException("Preço não pode ser negativo!");
+        }
+        
+
         
