@@ -11,19 +11,4 @@ public class Produto {
             throw new IllegalArgumentException("Nome do produto não pode ser vazio!");
         }
 
-        if (preco < 0) {
-            throw new IllegalArgumentException("Preço não pode ser negativo!");
-        }
-
-        this.nome = nome;
-        this.preco = preco;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-}
+        
