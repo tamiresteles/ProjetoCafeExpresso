@@ -11,4 +11,13 @@ void deveRetornarZeroQuandoNaoTemItens() {
 
     assertEquals(0.0, pedido.calcularTotal());
 }
+@Test
+void deveCalcularTotalComUmProduto() {
+    Pedido pedido = new Pedido();
+
+    Produto p = new Produto("Café", 10.0);
+    pedido.adicionarProduto(p);
+
+    assertEquals(10.0, pedido.calcularTotal());
+}
 }
