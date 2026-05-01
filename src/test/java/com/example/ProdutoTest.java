@@ -11,7 +11,6 @@ public class ProdutoTest {
         assertEquals("Café", p.getNome());
         assertEquals(10.0, p.getPreco());
     }
-<<<<<<< HEAD
 @Test
     void naoDevePermitirNomeVazio() {
         assertThrows(IllegalArgumentException.class, () -> {
@@ -25,6 +24,4 @@ public class ProdutoTest {
             new Produto("Café", -5.0);
         });
     }
-=======
->>>>>>> c367e8d1d2a989f07da31cf59639e4d8e6cb9fc1
 }

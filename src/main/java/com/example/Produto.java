@@ -14,11 +14,8 @@ public class Produto {
         if (preco < 0) {
             throw new IllegalArgumentException("Preço não pode ser negativo!");
         }
-<<<<<<< HEAD
           this.nome = nome;
-=======
         this.nome = nome;
->>>>>>> c367e8d1d2a989f07da31cf59639e4d8e6cb9fc1
         this.preco = preco;
     }
 
