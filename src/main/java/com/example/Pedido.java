@@ -50,11 +50,16 @@ public class Pedido {
 
     public void finalizarPedido() {
 
-        if (status != StatusPedido.EM_PREPARO) {
-            throw new IllegalStateException("Pedido não está em preparo!");
-        }
+    if (itens.isEmpty()) {
+        throw new IllegalStateException("Pedido sem itens!");
+    }
 
-        status = StatusPedido.FINALIZADO;
+    if (status != StatusPedido.EM_PREPARO) {
+        throw new IllegalStateException("Pedido não está em preparo!");
+    }
+
+    status = StatusPedido.FINALIZADO;
+}
     }
 
     public StatusPedido getStatus() {

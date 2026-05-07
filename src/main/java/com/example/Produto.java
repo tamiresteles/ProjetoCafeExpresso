@@ -7,7 +7,7 @@ public class Produto {
 
     public Produto(String nome, double preco) {
 
-        if (nome == null || nome.trim() .isEmpty()) {
+        if (nome == null || nome.trim().isEmpty()) {
             throw new IllegalArgumentException("Nome do produto não pode ser vazio!");
         }
 
