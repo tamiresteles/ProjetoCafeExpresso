@@ -5,26 +5,63 @@ import java.util.List;
 
 public class Pedido {
 
-    private List<Produto> itens = new ArrayList<>();
+    private List<ItemPedido> itens;
+    private StatusPedido status;
 
-    // Adiciona um produto ao pedido
-    public void adicionarProduto(Produto produto) {
-        itens.add(produto);
+    public Pedido() {
+        this.itens = new ArrayList<>();
+        this.status = StatusPedido.PENDENTE;
     }
 
-    // Calcula o valor total do pedido
+    public void adicionarItem(Produto produto, int quantidade) {
+
+        ItemPedido item = new ItemPedido(produto, quantidade);
+        itens.add(item);
+    }
+
     public double calcularTotal() {
+
         double total = 0;
 
-        for (Produto p : itens) {
-            total += p.getPreco();
+        for (ItemPedido item : itens) {
+            total += item.calcularSubtotal();
         }
 
         return total;
     }
 
-    // (Opcional) retorna a lista de itens
-    public List<Produto> getItens() {
+    public void pagar() {
+
+        if (status != StatusPedido.PENDENTE) {
+            throw new IllegalStateException("Pedido já foi pago!");
+        }
+
+        status = StatusPedido.PAGO;
+    }
+
+    public void enviarParaCozinha() {
+
+        if (status != StatusPedido.PAGO) {
+            throw new IllegalStateException("Pedido precisa estar pago!");
+        }
+
+        status = StatusPedido.EM_PREPARO;
+    }
+
+    public void finalizarPedido() {
+
+        if (status != StatusPedido.EM_PREPARO) {
+            throw new IllegalStateException("Pedido não está em preparo!");
+        }
+
+        status = StatusPedido.FINALIZADO;
+    }
+
+    public StatusPedido getStatus() {
+        return status;
+    }
+
+    public List<ItemPedido> getItens() {
         return itens;
     }
 }
