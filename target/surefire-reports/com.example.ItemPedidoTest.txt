@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.example.ItemPedidoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.122 s <<< FAILURE! - in com.example.ItemPedidoTest
+com.example.ItemPedidoTest.deveCriarItemPedido  Time elapsed: 0.073 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error on token "}", delete this token
+	Syntax error, insert "}" to complete ClassBody
+
+	at com.example.ItemPedido.<init>(ItemPedido.java:7)
+	at com.example.ItemPedidoTest.deveCriarItemPedido(ItemPedidoTest.java:11)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
