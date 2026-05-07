@@ -60,7 +60,6 @@ public class Pedido {
 
     status = StatusPedido.FINALIZADO;
 }
-
     public StatusPedido getStatus() {
         return status;
     }

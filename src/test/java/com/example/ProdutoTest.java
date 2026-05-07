@@ -8,7 +8,7 @@ public class ProdutoTest {
     @Test
     void deveCriarProdutoValido() {
        Produto p = new Produto ("café", 10.0);
-        assertEquals("afé", p.getNome());
+        assertEquals("café", p.getNome());
         assertEquals(10.0, p.getPreco());
     }
 @Test
