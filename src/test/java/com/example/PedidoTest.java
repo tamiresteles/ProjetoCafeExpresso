@@ -16,7 +16,7 @@ void deveCalcularTotalComUmProduto() {
     Pedido pedido = new Pedido();
 
     Produto p = new Produto("Café", 10.0);
-    pedido.adicionarProduto(p);
+    pedido.adicionarItem(p, 1);
 
     assertEquals(10.0, pedido.calcularTotal());
 }
@@ -24,8 +24,8 @@ void deveCalcularTotalComUmProduto() {
 void deveSomarDoisProdutos() {
     Pedido pedido = new Pedido();
 
-    pedido.adicionarProduto(new Produto("Café", 10.0));
-    pedido.adicionarProduto(new Produto("Pão", 5.0));
+    pedido.adicionarItem(new Produto("Café", 10.0), 1);
+    pedido.adicionarItem(new Produto("Pão", 5.0), 1);
 
     assertEquals(15.0, pedido.calcularTotal());
 }
@@ -33,10 +33,9 @@ void deveSomarDoisProdutos() {
 void deveSomarVariosProdutos() {
     Pedido pedido = new Pedido();
 
-    pedido.adicionarProduto(new Produto("Café", 10.0));
-    pedido.adicionarProduto(new Produto("Pão", 5.0));
-    pedido.adicionarProduto(new Produto("Leite", 7.0));
-
+    pedido.adicionarItem(new Produto("Café", 10.0), 1);
+    pedido.adicionarItem(new Produto("Pão", 5.0), 1);
+    pedido.adicionarItem(new Produto("Leite", 7.0), 1);
     assertEquals(22.0, pedido.calcularTotal());
 }
 }
